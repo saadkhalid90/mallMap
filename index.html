@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mall Illustrated Map</title>
+    <style media="screen">
+      body {
+        background-color: #E6C970;
+        margin: 0px;
+      }
+      div.root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      div.mapContain {
+        margin-top: 30px;
+        position: relative;
+      }
+      img {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 0
+        opacity: 0;
+      }
+      svg.voronoi {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1
+      }
+      svg.interCirc {
+        z-index: 2
+      }
+    </style>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+    <script src="https://raw.githack.com/Kcnarf/d3-weighted-voronoi/master/build/d3-weighted-voronoi.js"></script>
+  </head>
+  <body>
+    <div class="root">
+      <div class="mapContain">
+          <img src="mall road map without text-01_1500.jpg" width = '930px'>
+          <svg class ="voronoi" width = '930px'viewBox = "0 0 1068 675"></svg>
+
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src= "index.js"></script>
+</html>
